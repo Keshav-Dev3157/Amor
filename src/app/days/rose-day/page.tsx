@@ -19,7 +19,7 @@ const MemoryPolaroid = ({ src, caption, rotation, xOffset, delay = 0 }: { src: s
             whileInView={{ opacity: 1, scale: 1, y: 0, rotate: rotation }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1, delay, ease: "easeOut" }}
-            className={`relative p-4 bg-white shadow-2xl rounded-sm w-64 md:w-80 border-8 border-white ${xOffset}`}
+            className={`relative p-4 bg-white shadow-2xl rounded-sm w-[85vw] md:w-80 border-8 border-white ${xOffset}`}
         >
             <div className="relative aspect-square overflow-hidden bg-gray-100 mb-4">
                 <img src={src} alt={caption} className="object-cover w-full h-full" />
@@ -115,7 +115,7 @@ export default function RoseDay() {
                 </section>
 
                 {/* SECTION 2: A Fragrant Memory (Personalization Layer) */}
-                <section className="min-h-screen py-[20vh] px-6 relative overflow-visible">
+                <section className="min-h-screen py-[20vh] px-8 relative overflow-visible z-10">
                     <div className="max-w-6xl mx-auto space-y-[30vh]">
                         {/* Intro to Memories */}
                         <div className="flex flex-col items-center text-center space-y-6 mb-20">
@@ -137,7 +137,7 @@ export default function RoseDay() {
                                     src={images.polaroid1}
                                     caption="Our Sunset"
                                     rotation={-4}
-                                    xOffset="ml-0 md:ml-10"
+                                    xOffset="mx-auto md:ml-10"
                                 />
                             )}
                         </div>
@@ -160,7 +160,7 @@ export default function RoseDay() {
                                     src={images.polaroid2}
                                     caption="Just for you"
                                     rotation={3}
-                                    xOffset="mr-0 md:mr-10"
+                                    xOffset="mx-auto md:mr-10"
                                     delay={0.2}
                                 />
                             )}
@@ -169,7 +169,7 @@ export default function RoseDay() {
                 </section>
 
                 {/* SECTION 3: The Pinnacle Reveal */}
-                <section className="h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent">
+                <section className="h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent z-10">
                     <div className="text-center space-y-8 z-10 max-w-3xl glass p-12 md:p-20 rounded-[4rem] border border-pink-soul/10 shadow-[0_0_80px_rgba(240,98,146,0.1)]">
                         <div className="flex justify-center mb-6">
                             <Sparkles className="w-12 h-12 text-pink-soul animate-pulse" />
