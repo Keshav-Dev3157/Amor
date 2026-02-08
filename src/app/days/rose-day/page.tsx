@@ -192,8 +192,13 @@ export default function RoseDay() {
 
                 {/* SECTION 4: Rose Bloom Display - Mobile Only */}
                 <section className="h-screen md:hidden flex items-center justify-center relative z-10">
-                    <div className="text-center">
-                        <p className="text-pink-soul/40 text-sm italic mb-4">Scroll to see the bloom</p>
+                    <div className="text-center px-8">
+                        <p className="text-pink-soul/80 text-lg font-romantic mb-6">
+                            This is for you, Khushi
+                        </p>
+                        <p className="text-pink-soul/60 text-sm italic mb-4">
+                            Please accept this rose as a gesture of my love
+                        </p>
                         <Heart className="w-8 h-8 text-pink-soul/60 mx-auto animate-pulse" />
                     </div>
                 </section>
