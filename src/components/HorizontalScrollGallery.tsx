@@ -94,13 +94,13 @@ export default function HorizontalScrollGallery({
     const getImageFrameClass = () => {
         switch (imageStyle) {
             case 'polaroid':
-                return 'p-4 bg-white shadow-2xl rounded-sm border-8 border-white';
+                return 'p-4 bg-white shadow-2xl rounded-2xl border-8 border-white';
             case 'modern':
-                return 'p-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl border border-white/20';
+                return 'p-2 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20';
             case 'minimal':
-                return 'rounded-lg overflow-hidden shadow-xl';
+                return 'rounded-2xl overflow-hidden shadow-xl';
             default:
-                return 'p-4 bg-white shadow-2xl rounded-sm border-8 border-white';
+                return 'p-4 bg-white shadow-2xl rounded-2xl border-8 border-white';
         }
     };
 
@@ -115,7 +115,7 @@ export default function HorizontalScrollGallery({
     return (
         <section ref={containerRef} className="h-screen overflow-hidden relative z-20">
             {/* Title Section */}
-            <div className="absolute top-20 left-0 right-0 z-20 text-center px-6">
+            <div className="absolute top-12 left-0 right-0 z-20 text-center px-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -129,7 +129,7 @@ export default function HorizontalScrollGallery({
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.2 }}
-                    className="text-lg md:text-xl text-gray-400 italic"
+                    className="text-lg md:text-xl text-gray-400 italic max-w-2xl mx-auto"
                 >
                     {subtitle}
                 </motion.p>
@@ -151,7 +151,7 @@ export default function HorizontalScrollGallery({
                             transition={{ delay: index * 0.1 }}
                             className={`${getImageFrameClass()} flex-shrink-0 w-[85vw] md:w-96 transform hover:scale-105 transition-transform duration-300`}
                         >
-                            <div className="relative aspect-square overflow-hidden bg-gray-100 mb-4">
+                            <div className="relative aspect-square overflow-hidden bg-gray-100 mb-4 rounded-xl">
                                 <img
                                     src={src}
                                     alt={`Memory ${index + 1}`}
