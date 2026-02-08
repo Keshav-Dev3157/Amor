@@ -188,10 +188,6 @@ export default function RoseDay() {
                             Back to Timeline
                         </Link>
                     </div>
-
-                    <footer className="absolute bottom-12 text-pink-soul/20 text-[10px] tracking-[1.2em] uppercase font-medium">
-                        Chapter 01 : Completed
-                    </footer>
                 </section>
             </div>
         </PageTransition>
