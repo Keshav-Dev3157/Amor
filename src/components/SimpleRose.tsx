@@ -96,7 +96,7 @@ const RoseStem = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> })
                 scaleY,
                 originY: 0 // Grows downward from the bloom
             }}
-            className="absolute left-1/2 top-[75vh] w-1.5 h-96 bg-gradient-to-b from-green-900 via-green-800 to-transparent -translate-x-1/2 rounded-full blur-[0.5px] z-10"
+            className="absolute left-1/2 top-[75vh] w-1.5 h-[32rem] bg-gradient-to-b from-green-900 via-green-800 to-transparent -translate-x-1/2 rounded-full blur-[0.5px] z-10"
         />
     );
 };
