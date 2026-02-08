@@ -21,11 +21,11 @@ interface PetalProps {
 
 // Sub-components moved outside to avoid re-creation on every render
 const BloomPetal = ({ petal, scrollYProgress }: PetalProps) => {
-    // Vertical Travel: Converging at the bloom center (75vh mobile, 45vh desktop)
+    // Vertical Travel: Converging at the bloom center (50vh for longer stem)
     const y = useTransform(
         scrollYProgress,
         [0, 0.85, 0.98],
-        [`${petal.initialY}vh`, 'calc(72vh)', 'calc(75vh)']
+        [`${petal.initialY}vh`, 'calc(47vh)', 'calc(50vh)']
     );
 
     // Horizontal Movement: Drifts then converges precisely (50vw)
@@ -96,7 +96,7 @@ const RoseStem = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> })
                 scaleY,
                 originY: 0 // Grows downward from the bloom
             }}
-            className="absolute left-1/2 top-[75vh] w-1.5 h-[32rem] bg-gradient-to-b from-green-900 via-green-800 to-transparent -translate-x-1/2 rounded-full blur-[0.5px] z-10"
+            className="absolute left-1/2 top-[50vh] w-1.5 h-[32rem] bg-gradient-to-b from-green-900 via-green-800 to-transparent -translate-x-1/2 rounded-full blur-[0.5px] z-10"
         />
     );
 };
@@ -155,7 +155,7 @@ export default function SimpleRose() {
                     x: '-50%',
                     y: '-50%'
                 }}
-                className="absolute left-1/2 top-[75vh] w-12 h-12 bg-pink-soul/30 rounded-full blur-[10px] z-30"
+                className="absolute left-1/2 top-[50vh] w-12 h-12 bg-pink-soul/30 rounded-full blur-[10px] z-30"
             />
         </div>
     );
