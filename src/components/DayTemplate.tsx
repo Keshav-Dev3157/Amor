@@ -7,7 +7,6 @@ import { ArrowLeft, Clock } from 'lucide-react';
 import PageTransition from '@/components/PageTransition';
 
 interface DayTemplateProps {
-    dayId: string;
     dayNumber: number;
     title: string;
     emoji: string;
@@ -15,7 +14,7 @@ interface DayTemplateProps {
     children?: React.ReactNode;
 }
 
-export default function DayTemplate({ dayId, dayNumber, title, emoji, color, children }: DayTemplateProps) {
+export default function DayTemplate({ dayNumber, title, emoji, color, children }: DayTemplateProps) {
     return (
         <PageTransition>
             <div className="relative min-h-screen pb-20 overflow-x-hidden bg-background text-foreground">
@@ -71,7 +70,7 @@ export default function DayTemplate({ dayId, dayNumber, title, emoji, color, chi
                     <div className="glass p-12 rounded-3xl text-center">
                         <h2 className="text-2xl font-bold mb-4 text-gray-800">Hang tight!</h2>
                         <p className="text-gray-600 mb-8 leading-relaxed">
-                            I'm still putting the finishing touches on this special experience for you.
+                            I&apos;m still putting the finishing touches on this special experience for you.
                             Each day will bring a new story and a new memory.
                         </p>
                         <div className="w-16 h-1 bg-gray-200 mx-auto rounded-full" style={{ backgroundColor: color + '44' }} />

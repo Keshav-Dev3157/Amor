@@ -1,11 +1,18 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Provide dummy defaults to prevent createClient from throwing during build/prerendering
+// Provide dummy defaults to avoid "Invalid URL" errors during build/prerendering
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
 const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
 
+// Extra safety: ensure the URL actually looks like a URL
+const isValidUrl = supabaseUrl.startsWith('http');
+
 if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
-    console.warn('Supabase credentials missing. Local experience will use placeholders.');
+    console.warn('Supabase credentials missing. Local/Build experience will use placeholders.');
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Only create the client if we have a valid-looking URL to prevent build crashes
+export const supabase = isValidUrl
+    ? createClient(supabaseUrl, supabaseAnonKey)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    : ({} as any);

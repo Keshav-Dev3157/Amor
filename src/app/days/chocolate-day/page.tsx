@@ -3,7 +3,6 @@ import DayTemplate from '@/components/DayTemplate';
 export default function ChocolateDay() {
     return (
         <DayTemplate
-            dayId="chocolate-day"
             dayNumber={3}
             title="Chocolate Day"
             emoji="🍫"

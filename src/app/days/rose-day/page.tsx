@@ -100,7 +100,7 @@ export default function RoseDay() {
                             transition={{ duration: 1.5, delay: 0.5 }}
                             className="text-xl md:text-2xl text-gray-400 italic max-w-2xl mx-auto leading-relaxed"
                         >
-                            "Happy Rose Day! They say roses speak the language the heart doesn't know how to say. So here's mine, blooming just for you."
+                            {"\"Happy Rose Day! They say roses speak the language the heart doesn't know how to say. So here's mine, blooming just for you.\""}
                         </motion.p>
                     </div>
 
@@ -145,7 +145,7 @@ export default function RoseDay() {
                         {/* Middle Text */}
                         <div className="flex justify-center text-center py-20">
                             <p className="text-2xl md:text-3xl font-serif text-pink-soul/40 italic max-w-xl">
-                                "The way you smile at me makes even the brightest rose feel dull."
+                                {"\"The way you smile at me makes even the brightest rose feel dull.\""}
                             </p>
                         </div>
 
@@ -178,7 +178,7 @@ export default function RoseDay() {
                             For You,<br /><span className="font-romantic text-7xl md:text-9xl">Love.</span>
                         </h2>
                         <p className="text-2xl md:text-3xl font-sans font-light text-gray-300 italic mb-12 translate-y-[-10px]">
-                            "Roses are red, violets are blue, but nothing in this world compares to you. ❤️"
+                            {"\"Roses are red, violets are blue, but nothing in this world compares to you. ❤️\""}
                         </p>
 
                         <Link

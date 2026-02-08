@@ -3,7 +3,6 @@ import DayTemplate from '@/components/DayTemplate';
 export default function TeddyDay() {
     return (
         <DayTemplate
-            dayId="teddy-day"
             dayNumber={4}
             title="Teddy Day"
             emoji="🧸"

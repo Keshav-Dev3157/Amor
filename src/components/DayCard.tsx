@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Lock, Heart } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { isDayUnlocked, getTimeUntilUnlock } from '@/lib/dateUtils';
 import { DayContent } from '@/lib/dayData';
 import { cn } from '@/lib/utils';
@@ -38,6 +38,7 @@ export default function DayCard({ day, index }: DayCardProps) {
             y: 0,
             transition: {
                 duration: 0.8,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 ease: [0.22, 1, 0.36, 1] as any
             }
         }
@@ -47,6 +48,7 @@ export default function DayCard({ day, index }: DayCardProps) {
         <motion.div
             initial="hidden"
             whileInView="visible"
+            variants={cardVariants}
             viewport={{ once: true }}
             className={cn(
                 "relative w-full max-w-md mx-auto mb-12 p-8 glass rounded-[2.5rem] group overflow-hidden border border-romantic-maroon/20",

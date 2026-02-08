@@ -62,7 +62,7 @@ export default function ProposeDay() {
                             The Silence
                         </h1>
                         <p className="text-xl md:text-2xl text-gray-400 italic max-w-2xl mx-auto leading-relaxed">
-                            "Before you, the world was just empty space. Silent. Beautiful, but missing its center."
+                            {"\"Before you, the world was just empty space. Silent. Beautiful, but missing its center.\""}
                         </p>
                     </motion.div>
 
@@ -80,7 +80,7 @@ export default function ProposeDay() {
                             <Anchor className="w-12 h-12 text-romantic-crimson" />
                             <h2 className="text-5xl font-pacifico text-pink-soul">You became my Gravity.</h2>
                             <p className="text-xl text-gray-400 font-inter leading-relaxed italic">
-                                Suddenly, I wasn't just drifting. Everything I did, every thought I had, started orbiting around you.
+                                {"Suddenly, I wasn't just drifting. Everything I did, every thought I had, started orbiting around you."}
                             </p>
                         </div>
 
@@ -103,7 +103,7 @@ export default function ProposeDay() {
                         whileInView={{ opacity: 1 }}
                         className="text-center space-y-12 z-10 px-6"
                     >
-                        <h2 className="text-4xl md:text-6xl font-pacifico text-pink-soul">Are you ready to see what I've been building?</h2>
+                        <h2 className="text-4xl md:text-6xl font-pacifico text-pink-soul">{"Are you ready to see what I've been building?"}</h2>
                         <div className="h-px w-32 bg-pink-soul/30 mx-auto" />
                         <p className="text-lg text-gray-500 uppercase tracking-[0.5em] font-bold">Keep scrolling for the pinnacle</p>
                     </motion.div>
@@ -120,7 +120,7 @@ export default function ProposeDay() {
                             My Queen,
                         </h2>
                         <p className="text-2xl md:text-3xl font-inter text-gray-300 italic mb-12">
-                            "In this lifetime and every other, I choose you. I propose that we build a world where only we exist. Will you keep orbiting with me?"
+                            {"\"In this lifetime and every other, I choose you. I propose that we build a world where only we exist. Will you keep orbiting with me?\""}
                         </p>
 
                         <div className="flex flex-col md:flex-row gap-6 justify-center items-center pointer-events-auto">
