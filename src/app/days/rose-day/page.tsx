@@ -169,7 +169,7 @@ export default function RoseDay() {
                 </section>
 
                 {/* SECTION 3: The Pinnacle Reveal */}
-                <section className="min-h-screen md:h-screen flex flex-col items-center justify-start md:justify-center px-6 pt-20 pb-64 md:pb-0 md:pt-0 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent z-10">
+                <section className="h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent z-10">
                     <div className="text-center space-y-8 z-10 max-w-3xl glass p-12 md:p-20 rounded-[4rem] border border-pink-soul/10 shadow-[0_0_80px_rgba(240,98,146,0.1)]">
                         <div className="flex justify-center mb-6">
                             <Sparkles className="w-12 h-12 text-pink-soul animate-pulse" />
@@ -187,6 +187,14 @@ export default function RoseDay() {
                         >
                             Back to Timeline
                         </Link>
+                    </div>
+                </section>
+
+                {/* SECTION 4: Rose Bloom Display - Mobile Only */}
+                <section className="h-screen md:hidden flex items-center justify-center relative z-10">
+                    <div className="text-center">
+                        <p className="text-pink-soul/40 text-sm italic mb-4">Scroll to see the bloom</p>
+                        <Heart className="w-8 h-8 text-pink-soul/60 mx-auto animate-pulse" />
                     </div>
                 </section>
             </div>
