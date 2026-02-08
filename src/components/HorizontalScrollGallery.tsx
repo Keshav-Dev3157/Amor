@@ -33,7 +33,12 @@ export default function HorizontalScrollGallery({
                 const { data: listData } = await supabase.storage.from(bucketName).list();
 
                 if (listData && listData.length > 0) {
-                    const imageUrls = listData.map((file: { name: string }) => {
+                    // Filter out non-image files (like placeholders)
+                    const imageFiles = listData.filter((file: { name: string }) =>
+                        /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
+                    );
+
+                    const imageUrls = imageFiles.map((file: { name: string }) => {
                         const { data } = supabase.storage.from(bucketName).getPublicUrl(file.name);
                         return data.publicUrl;
                     });
@@ -78,8 +83,14 @@ export default function HorizontalScrollGallery({
                     ease: 'none'
                 });
 
+                // Force a refresh after a small delay to ensure layout is settled
+                setTimeout(() => ScrollTrigger.refresh(), 100);
+
                 return () => {
-                    ScrollTrigger.getAll().forEach(st => st.kill());
+                    tl.kill();
+                    ScrollTrigger.getAll().forEach(st => {
+                        if (st.trigger === container) st.kill();
+                    });
                 };
             }
         }

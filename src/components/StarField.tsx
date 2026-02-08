@@ -55,14 +55,15 @@ export default function StarField() {
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(240, 98, 146, ${this.opacity})`; // Pink Soul Stars
-                ctx.fill();
 
-                if (this.opacity > 0.8) {
-                    ctx.shadowBlur = 10;
+                // Only use shadows for a few bright stars to save performance
+                if (this.opacity > 0.9) {
+                    ctx.shadowBlur = 8;
                     ctx.shadowColor = '#f06292';
-                } else {
-                    ctx.shadowBlur = 0;
                 }
+
+                ctx.fill();
+                ctx.shadowBlur = 0; // Reset immediately
             }
         }
 
@@ -76,7 +77,9 @@ export default function StarField() {
         };
 
         const animate = () => {
-            ctx.fillStyle = 'rgba(15, 5, 7, 0.1)'; // Trail effect
+            // Faster clear instead of trail for better performance on mobile/laggy screens
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = '#0f0507';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             stars.forEach(star => {
