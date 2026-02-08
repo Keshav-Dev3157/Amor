@@ -38,7 +38,6 @@ export default function DayCard({ day, index }: DayCardProps) {
             y: 0,
             transition: {
                 duration: 0.8,
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 ease: [0.22, 1, 0.36, 1] as any
             }
         }

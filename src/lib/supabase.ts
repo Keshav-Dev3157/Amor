@@ -14,5 +14,4 @@ if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_A
 // Only create the client if we have a valid-looking URL to prevent build crashes
 export const supabase = isValidUrl
     ? createClient(supabaseUrl, supabaseAnonKey)
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     : ({} as any);
