@@ -169,7 +169,7 @@ export default function RoseDay() {
                 </section>
 
                 {/* SECTION 3: The Pinnacle Reveal */}
-                <section className="h-screen flex flex-col items-center justify-center px-6 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent z-10">
+                <section className="h-screen flex flex-col items-center justify-center px-6 pb-32 md:pb-0 relative bg-gradient-to-t from-romantic-maroon/20 to-transparent z-10">
                     <div className="text-center space-y-8 z-10 max-w-3xl glass p-12 md:p-20 rounded-[4rem] border border-pink-soul/10 shadow-[0_0_80px_rgba(240,98,146,0.1)]">
                         <div className="flex justify-center mb-6">
                             <Sparkles className="w-12 h-12 text-pink-soul animate-pulse" />
