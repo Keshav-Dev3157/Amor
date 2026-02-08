@@ -113,7 +113,7 @@ export default function HorizontalScrollGallery({
     }
 
     return (
-        <section ref={containerRef} className="h-screen overflow-hidden relative">
+        <section ref={containerRef} className="h-screen overflow-hidden relative z-20">
             {/* Title Section */}
             <div className="absolute top-20 left-0 right-0 z-20 text-center px-6">
                 <motion.h2
