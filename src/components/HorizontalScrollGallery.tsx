@@ -120,19 +120,10 @@ export default function HorizontalScrollGallery({
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl font-serif text-pink-soul mb-3"
+                    className="text-4xl md:text-5xl font-serif text-pink-soul"
                 >
                     {title}
                 </motion.h2>
-                <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className="text-base md:text-lg text-gray-400/90 italic max-w-xl mx-auto"
-                >
-                    {subtitle}
-                </motion.p>
             </div>
 
             {/* Horizontal Scroll Gallery */}
@@ -171,6 +162,19 @@ export default function HorizontalScrollGallery({
                         </motion.div>
                     ))}
                 </div>
+            </div>
+
+            {/* Subtitle Below Carousel */}
+            <div className="absolute bottom-20 left-0 right-0 z-20 text-center px-6">
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.3 }}
+                    className="text-base md:text-lg text-gray-400/90 italic max-w-xl mx-auto"
+                >
+                    {subtitle}
+                </motion.p>
             </div>
 
             {/* Scroll Hint */}
