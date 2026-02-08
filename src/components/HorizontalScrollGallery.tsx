@@ -115,7 +115,7 @@ export default function HorizontalScrollGallery({
     return (
         <section ref={containerRef} className="h-screen overflow-hidden relative z-20">
             {/* Title Section */}
-            <div className="absolute top-12 left-0 right-0 z-20 text-center px-6">
+            <div className="absolute top-24 left-0 right-0 z-20 text-center px-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
