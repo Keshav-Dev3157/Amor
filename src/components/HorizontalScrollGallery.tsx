@@ -39,18 +39,12 @@ export default function HorizontalScrollGallery({
                     });
                     setImages(imageUrls);
                 } else {
-                    // Fallback placeholders
-                    setImages([
-                        '/memories/polaroid1.png',
-                        '/memories/polaroid2.png',
-                    ]);
+                    // No images in bucket
+                    setImages([]);
                 }
             } catch (error) {
                 console.error('Error fetching images:', error);
-                setImages([
-                    '/memories/polaroid1.png',
-                    '/memories/polaroid2.png',
-                ]);
+                setImages([]);
             } finally {
                 setLoading(false);
             }
@@ -108,6 +102,22 @@ export default function HorizontalScrollGallery({
         return (
             <section className="min-h-screen flex items-center justify-center">
                 <Loader2 className="w-12 h-12 text-pink-soul animate-spin" />
+            </section>
+        );
+    }
+
+    if (images.length === 0) {
+        return (
+            <section className="min-h-screen flex items-center justify-center px-6">
+                <div className="text-center max-w-2xl">
+                    <h2 className="text-4xl md:text-5xl font-serif text-pink-soul mb-4">{title}</h2>
+                    <p className="text-lg text-gray-400 mb-6">
+                        No images found in the <code className="text-pink-soul">{bucketName}</code> bucket.
+                    </p>
+                    <p className="text-sm text-gray-500">
+                        Upload images to your Supabase Storage bucket to see them here! 🌹
+                    </p>
+                </div>
             </section>
         );
     }
