@@ -141,7 +141,7 @@ export default function SimpleRose() {
     if (!mounted) return null;
 
     return (
-        <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 5 }}>
+        <div className="fixed inset-0 pointer-events-none overflow-hidden" style={{ zIndex: 1 }}>
             <RoseStem scrollYProgress={scrollYProgress} />
 
             {petals.map((petal) => (
