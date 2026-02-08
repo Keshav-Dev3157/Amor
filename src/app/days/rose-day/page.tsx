@@ -191,7 +191,7 @@ export default function RoseDay() {
                 </section>
 
                 {/* SECTION 4: Rose Bloom Display - Mobile Only */}
-                <section className="h-screen md:hidden flex items-center justify-start px-6 pt-20 relative z-10">
+                <section className="h-screen md:hidden flex flex-col items-center justify-start px-6 pt-12 relative z-10">
                     <div className="text-center px-8">
                         <p className="text-pink-soul/80 text-lg font-romantic mb-6">
                             This is for you, Khushi
